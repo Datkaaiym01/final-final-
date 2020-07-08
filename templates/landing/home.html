@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <div class="section-top">
+        <img src="{% static 'img/main_img.jpg' %}" class="img-responsive">
+    </div>
+     
+    <div class="section section1 best_seller">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">
+                        Бестселлеры
+                    </h1>
+                </div>
+                {% for product_image in products_images %}
+                    {% include 'landing/product_item.html' %}
+                {% endfor %}
+                {% include 'pagination.html' %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

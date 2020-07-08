@@ -1,0 +1,83 @@
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-top">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="basket-container-1">
+          <div class="basket-container">
+              <a href="">Корзина <span id="basket_total_amount"></span><span id="basket_total_nmb">
+                  {% if products_total_nmb %}
+                      ({{ products_total_nmb }})
+                  {% else %}
+                      (0)
+                  {% endif %}
+              </span></a>
+              <div class="basket-items hidden">
+                  <ul class="">
+                      {% for product_in_basket in products_in_basket %}
+                          <li>
+                              {{ product_in_basket.product.name }} {{ product_in_basket.nmb }} шт.
+                              по {{ product_in_basket.price_per_item }} сом.
+                              <a class="delete-item" href="" data-product_id="{{ product_in_basket.id }}">Убрать</a>
+                          </li>
+                      {% endfor %}
+                  </ul>
+              </div>
+          </div>
+        </li>
+        <a href="http://127.0.0.1:8000/checkout/">
+                 Оформить заказ
+        </a>
+      </ul>
+    </nav>
+    <nav class="navbar navbar-default navbar-main">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button> 
+          <a class="navbar-brand" href="/">Книжная полка</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Главная</a></li>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#contact">Контакты</a></li>
+            <li class="dropdown"> 
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Каталог<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Бестселлеры</a></li>
+                <li><a href="#">Книги, изменившие жизнь</a></li>
+                <li><a href="#">Лауреаты премий</a></li>
+                <li><a href="#">Популярные авторы</a></li>
+                <li><a href="#">Новинки</a></li>
+                <li><a href="#">Рандом книга</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Жанры</li>
+                <li><a href="#">Отечественная литература</a></li>
+                <li><a href="#">Зарубежная литература</a></li>
+                <li><a href="#">Психология и Саморазвитие</a></li>
+                <li><a href="#">Бизнес</a></li>
+                <li><a href="#">Автобиография</a></li>
+                <li><a href="#">Детектив</a></li>
+                <li><a href="#">Фантастика/Фэнтези</a></li>
+                <li><a href="#">Приключение</a></li>
+                <li><a href="#">Юмор и Сатира</a></li>
+                <li><a href="#">Поэзия</a></li>
+                <li><a href="#">Любовный роман</a></li>
+                <li><a href="#">Книги для детей</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="form-inline" action="{% url 'home' %}">
+            {% csrf_token %}
+            <div class="search">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button name='key_word' class="btn btn-outline-success my-2 my-sm-0" type="submit">Искать</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </nav>

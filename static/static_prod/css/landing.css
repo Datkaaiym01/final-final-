@@ -1,0 +1,51 @@
+html, body{
+    height: 100%;
+    max-height: 100%;
+    font-family: 'Cormorant SC', serif;
+}
+
+h1{
+    font-size: 70px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+input{
+    font-family: 'Cormorant Infant', serif;
+}
+.top-container{
+    padding-top: 10%;
+}
+
+.general-container{
+    background: url('../img/book.jpg') no-repeat center center fixed;
+    height: 100%;
+}
+
+.general-container form{
+    margin-top: 30px;
+}
+
+.general-container form label{
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+}
+
+.btn-orange{
+    background-color: #e8643e;
+    border: none;
+}
+
+.btn-orange:hover{
+    background-color: #dc5129;
+    border: none;
+}
+
+.title{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: 200px;
+    line-height: 50px;
+}
