@@ -1,0 +1,142 @@
+html, body{
+    height: 100%;
+    max-height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #edeef0;
+}
+
+.navbar{
+    margin-bottom: 0;
+}
+
+.wrapper{
+    min-height: 100%;
+}
+
+.wrapper-content{
+    overflow: auto;
+    padding-bottom: 180px; 
+}
+
+#footer{
+    position: relative;
+    margin-top: -180px; 
+    height: 180px;
+    clear: both;
+    background-color: rgba(217, 218, 223, 0.918);
+}
+
+.section-top{
+    margin-bottom: 20px
+}
+
+.product-description-tabs{
+    padding: 10px;
+}
+
+.section{
+    padding: 50px 0;
+}
+
+.section h1{
+    margin-bottom: 40px;
+}
+
+.product-item{
+    height: 570px;
+    background-color: white;
+    border: 1px solid lightgrey;
+    position: relative;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.add-to-card-btn{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.discount-container{
+    position: absolute;
+    top: 30%;
+    background: #55e073;
+    width: 30%;
+    color: white;
+    font-weight: 700;
+    padding: 3px;
+}
+
+.section-delivery{
+    height: 300px;
+    background-color: darkseagreen;
+    text-align: center;
+    color: white;
+}
+
+.product-image-item{
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.navbar-top{
+    min-height: 10px;
+    height: 20px;
+    background-color: rgb(234, 226, 235);
+    border: none;
+    border-radius: 0;
+}
+
+.navbar-main{
+    background-color: rgba(210, 201, 211, 0.87);
+    border: none;
+    border-radius: 0;
+}
+
+.navbar-right{
+    margin-right: 15px;
+}
+
+.basket-container{
+    position: relative;
+    width: 300px;
+    /* padding: 15px 80px; */
+    right: -5px;
+    /* top: 15px;
+    right: -50px; */
+}
+
+.user-menu-icon{
+    width: 27px;
+    height: 24px;
+    top: 2px;
+    left: calc(50% - 16px);
+    background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fru.pngtree.com%2Ffreepng%2Fshopping-bag-icon-for-your-design-websites-and-projects_5148887.html&psig=AOvVaw3IZIcT5PYeO-erwN02w2mj&ust=1593231522064000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPCBpv3QnuoCFQAAAAAdAAAAABAD);
+    color: black;
+}
+
+.basket-items{
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    background-color: rgba(217, 218, 223, 0.918);
+    z-index: 10;
+    padding: 10px;
+    color: #120882;
+}
+
+.form-error{
+    color: rgba(255, 0, 0, 0.671);
+}
+
+.search{
+    margin: 7px;
+    position: absolute;
+    right: 0;
+}
+
+.pagination{
+    padding-left: 500px;
+}
